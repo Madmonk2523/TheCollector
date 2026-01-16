@@ -11,7 +11,7 @@ const createBackgroundParticles = () => {
             position: absolute;
             width: ${Math.random() * 300 + 50}px;
             height: ${Math.random() * 300 + 50}px;
-            background: linear-gradient(${Math.random() * 360}deg, rgba(255, 215, 0, ${Math.random() * 0.1}), rgba(29, 53, 87, ${Math.random() * 0.05}));
+            background: linear-gradient(${Math.random() * 360}deg, rgba(0, 150, 255, ${Math.random() * 0.2}), rgba(0, 100, 200, ${Math.random() * 0.15}));
             border-radius: 50%;
             filter: blur(${Math.random() * 50 + 30}px);
             top: ${Math.random() * 100}%;
@@ -97,29 +97,6 @@ document.querySelectorAll('.hours-card, .product-card, .review-card').forEach(el
     observer.observe(el);
 });
 
-// Parallax effect on mouse move
-document.addEventListener('mousemove', (e) => {
-    const cards = document.querySelectorAll('.product-card, .hours-card, .review-card');
-    cards.forEach(card => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        
-        const xPercent = (x / rect.width - 0.5) * 5;
-        const yPercent = (y / rect.height - 0.5) * 5;
-        
-        card.style.transform = `perspective(1000px) rotateY(${xPercent}deg) rotateX(${-yPercent}deg)`;
-    });
-});
-
-// Reset transform on mouse leave
-document.addEventListener('mouseleave', () => {
-    const cards = document.querySelectorAll('.product-card, .hours-card, .review-card');
-    cards.forEach(card => {
-        card.style.transform = 'perspective(1000px) rotateY(0) rotateX(0)';
-    });
-});
-
 // Smooth hover effect for cards
 const cards = document.querySelectorAll('.hours-card, .product-card, .review-card');
 cards.forEach(card => {
@@ -140,7 +117,7 @@ window.addEventListener('scroll', () => {
     // Animate background elements on scroll
     const bgAnimation = document.querySelector('.background-animation');
     if (bgAnimation) {
-        bgAnimation.style.transform = `translateY(${scrolled * 0.5}px)`;
+        bgAnimation.style.transform = `translateY(${scrolled * 0.3}px) rotate(${scrolled * 0.02}deg)`;
     }
 });
 
@@ -242,7 +219,7 @@ document.addEventListener('mousemove', (e) => {
     
     const blobs = document.querySelectorAll('.blob, .gradient-orb');
     blobs.forEach((blob, index) => {
-        const speed = (index + 1) * 0.01;
-        blob.style.transform = `translate(${x * 100 * speed}px, ${y * 100 * speed}px)`;
+        const speed = (index + 1) * 0.03;
+        blob.style.transform = `translate(${x * 150 * speed}px, ${y * 150 * speed}px)`;
     });
 });

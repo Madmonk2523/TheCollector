@@ -27,17 +27,23 @@ body {
     z-index: -2;
     pointer-events: none;
     overflow: hidden;
-    background: linear-gradient(45deg, #0055dd 0%, #0088ff 25%, #00a8ff 50%, #0066ff 75%, #0055dd 100%);
+    background: linear-gradient(45deg, #0044dd 0%, #0077ff 20%, #00aaff 40%, #0088ff 60%, #0055dd 80%, #0044dd 100%);
     background-size: 400% 400%;
-    animation: backgroundShift 15s ease infinite;
+    animation: backgroundShift 10s ease infinite;
 }
 
 @keyframes backgroundShift {
     0% {
         background-position: 0% 50%;
     }
+    25% {
+        background-position: 50% 100%;
+    }
     50% {
         background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 0%;
     }
     100% {
         background-position: 0% 50%;
@@ -52,10 +58,11 @@ body {
     width: 200%;
     height: 200%;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(0, 200, 255, 0.15) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(0, 100, 255, 0.12) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(0, 150, 255, 0.1) 0%, transparent 50%);
-    animation: rotateBackground 20s linear infinite;
+        radial-gradient(circle at 20% 80%, rgba(0, 220, 255, 0.2) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 120, 255, 0.18) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(0, 180, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 60% 60%, rgba(0, 100, 200, 0.12) 0%, transparent 50%);
+    animation: rotateBackground 25s linear infinite;
 }
 
 @keyframes rotateBackground {
@@ -71,54 +78,54 @@ body {
 .floating-shape {
     position: absolute;
     border-radius: 50%;
-    opacity: 0.06;
-    filter: blur(40px);
+    opacity: 0.12;
+    filter: blur(50px);
     animation: float 8s ease-in-out infinite;
 }
 
 .shape1 {
     width: 300px;
     height: 300px;
-    background: linear-gradient(135deg, #0088ff, #00d4ff);
+    background: linear-gradient(135deg, #0099ff, #00ddff);
     top: 10%;
     left: 10%;
-    animation: float 12s ease-in-out infinite;
+    animation: float 8s ease-in-out infinite;
 }
 
 .shape2 {
     width: 250px;
     height: 250px;
-    background: linear-gradient(135deg, #0055dd, #0088ff);
+    background: linear-gradient(135deg, #0066dd, #0099ff);
     top: 60%;
     right: 10%;
-    animation: float 14s ease-in-out infinite reverse;
+    animation: float 9s ease-in-out infinite reverse;
 }
 
 .shape3 {
     width: 350px;
     height: 350px;
-    background: linear-gradient(135deg, #0066ff, #0088ff);
+    background: linear-gradient(135deg, #0077ff, #00aaff);
     bottom: 10%;
     left: 50%;
-    animation: float 16s ease-in-out infinite;
+    animation: float 10s ease-in-out infinite;
 }
 
 .shape4 {
     width: 280px;
     height: 280px;
-    background: radial-gradient(circle, #00c8ff, #0088ff);
+    background: radial-gradient(circle, #00ddff, #0099ff);
     top: 30%;
     right: 20%;
-    animation: float 13s ease-in-out infinite reverse;
+    animation: float 8.5s ease-in-out infinite reverse;
 }
 
 .shape5 {
     width: 320px;
     height: 320px;
-    background: linear-gradient(135deg, #0044cc, #0066ff);
+    background: linear-gradient(135deg, #0055dd, #0088ff);
     bottom: 20%;
     right: 30%;
-    animation: float 15s ease-in-out infinite;
+    animation: float 9.5s ease-in-out infinite;
 }
 
 /* SVG Blob Animations */
@@ -126,9 +133,9 @@ body {
     position: absolute;
     width: 300px;
     height: 300px;
-    opacity: 0.08;
-    filter: blur(30px);
-    animation: blobAnimation 8s infinite;
+    opacity: 0.15;
+    filter: blur(40px);
+    animation: blobAnimation 6s infinite;
     top: 20%;
     left: 15%;
 }
@@ -136,10 +143,10 @@ body {
 .blob2 {
     width: 350px;
     height: 350px;
-    opacity: 0.06;
+    opacity: 0.12;
     bottom: 10%;
     right: 10%;
-    animation: blobAnimation 10s infinite reverse;
+    animation: blobAnimation 7s infinite reverse;
 }
 
 @keyframes blobAnimation {
@@ -161,27 +168,27 @@ body {
 .gradient-orb {
     position: absolute;
     border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.1;
+    filter: blur(120px);
+    opacity: 0.25;
     mix-blend-mode: screen;
 }
 
 .orb1 {
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(0, 200, 255, 0.8), rgba(0, 200, 255, 0));
-    top: -100px;
-    left: -100px;
-    animation: orbFloat 20s ease-in-out infinite;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(0, 220, 255, 1), rgba(0, 220, 255, 0));
+    top: -150px;
+    left: -150px;
+    animation: orbFloat 12s ease-in-out infinite;
 }
 
 .orb2 {
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, rgba(0, 100, 200, 0.8), rgba(0, 100, 200, 0));
-    bottom: -150px;
-    right: -150px;
-    animation: orbFloat 25s ease-in-out infinite reverse;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 120, 255, 1), rgba(0, 120, 255, 0));
+    bottom: -200px;
+    right: -200px;
+    animation: orbFloat 15s ease-in-out infinite reverse;
 }
 
 @keyframes orbFloat {
@@ -1063,6 +1070,67 @@ body::before {
 
 .social-btn:hover::before {
     left: 100%;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-item {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 30px 40px;
+    border: 2px solid rgba(0, 168, 255, 0.3);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    animation: fadeInUp 0.8s ease-out;
+    box-shadow: 0 8px 32px rgba(0, 150, 255, 0.2);
+}
+
+.contact-item:hover {
+    transform: translateY(-10px) scale(1.05);
+    border-color: rgba(0, 168, 255, 0.6);
+    box-shadow: 0 0 40px rgba(0, 150, 255, 0.4),
+                0 15px 45px rgba(0, 150, 255, 0.3);
+}
+
+.contact-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #00d4ff;
+    font-weight: 700;
+}
+
+.contact-item p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: white;
+}
+
+.contact-item a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: #00a8ff;
+    text-shadow: 0 0 20px rgba(0, 168, 255, 0.8);
+}
+
+.contact h3 {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 1.8em;
+    font-weight: 700;
 }
 
 /* Footer */
