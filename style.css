@@ -12,7 +12,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 50%, #f0f0f0 100%);
+    background: linear-gradient(135deg, #0055dd 0%, #0088ff 50%, #0044cc 100%);
     position: relative;
     overflow-x: hidden;
 }
@@ -27,7 +27,7 @@ body {
     z-index: -2;
     pointer-events: none;
     overflow: hidden;
-    background: linear-gradient(45deg, #f5f5f5 0%, #ffffff 25%, #f9f9f9 50%, #f0f0f0 75%, #f5f5f5 100%);
+    background: linear-gradient(45deg, #0055dd 0%, #0088ff 25%, #00a8ff 50%, #0066ff 75%, #0055dd 100%);
     background-size: 400% 400%;
     animation: backgroundShift 15s ease infinite;
 }
@@ -52,9 +52,9 @@ body {
     width: 200%;
     height: 200%;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(29, 53, 87, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(0, 200, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 100, 255, 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(0, 150, 255, 0.1) 0%, transparent 50%);
     animation: rotateBackground 20s linear infinite;
 }
 
@@ -79,7 +79,7 @@ body {
 .shape1 {
     width: 300px;
     height: 300px;
-    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    background: linear-gradient(135deg, #0088ff, #00d4ff);
     top: 10%;
     left: 10%;
     animation: float 12s ease-in-out infinite;
@@ -88,7 +88,7 @@ body {
 .shape2 {
     width: 250px;
     height: 250px;
-    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+    background: linear-gradient(135deg, #0055dd, #0088ff);
     top: 60%;
     right: 10%;
     animation: float 14s ease-in-out infinite reverse;
@@ -97,7 +97,7 @@ body {
 .shape3 {
     width: 350px;
     height: 350px;
-    background: linear-gradient(135deg, #ffd700, #1a1a1a);
+    background: linear-gradient(135deg, #0066ff, #0088ff);
     bottom: 10%;
     left: 50%;
     animation: float 16s ease-in-out infinite;
@@ -106,7 +106,7 @@ body {
 .shape4 {
     width: 280px;
     height: 280px;
-    background: radial-gradient(circle, #ffed4e, #ffd700);
+    background: radial-gradient(circle, #00c8ff, #0088ff);
     top: 30%;
     right: 20%;
     animation: float 13s ease-in-out infinite reverse;
@@ -115,7 +115,7 @@ body {
 .shape5 {
     width: 320px;
     height: 320px;
-    background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+    background: linear-gradient(135deg, #0044cc, #0066ff);
     bottom: 20%;
     right: 30%;
     animation: float 15s ease-in-out infinite;
@@ -162,14 +162,14 @@ body {
     position: absolute;
     border-radius: 50%;
     filter: blur(80px);
-    opacity: 0.05;
-    mix-blend-mode: multiply;
+    opacity: 0.1;
+    mix-blend-mode: screen;
 }
 
 .orb1 {
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, rgba(255, 215, 0, 1), rgba(255, 215, 0, 0));
+    background: radial-gradient(circle, rgba(0, 200, 255, 0.8), rgba(0, 200, 255, 0));
     top: -100px;
     left: -100px;
     animation: orbFloat 20s ease-in-out infinite;
@@ -178,7 +178,7 @@ body {
 .orb2 {
     width: 500px;
     height: 500px;
-    background: radial-gradient(circle, rgba(29, 53, 87, 1), rgba(29, 53, 87, 0));
+    background: radial-gradient(circle, rgba(0, 100, 200, 0.8), rgba(0, 100, 200, 0));
     bottom: -150px;
     right: -150px;
     animation: orbFloat 25s ease-in-out infinite reverse;
@@ -207,8 +207,8 @@ body::before {
     width: 100%;
     height: 100%;
     background: 
-        radial-gradient(circle at 20% 80%, rgba(255, 215, 0, 0.05) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(29, 53, 87, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(0, 150, 255, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 100, 200, 0.06) 0%, transparent 50%);
     pointer-events: none;
     z-index: -1;
     animation: gradientPulse 8s ease-in-out infinite;
@@ -345,12 +345,12 @@ body::before {
 
 @keyframes neonGlow {
     0%, 100% {
-        text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px rgba(255, 215, 0, 0.5);
-        box-shadow: 0 0 10px #ffd700;
+        text-shadow: 0 0 10px #00a8ff, 0 0 20px #00a8ff, 0 0 30px rgba(0, 168, 255, 0.5);
+        box-shadow: 0 0 10px #00a8ff;
     }
     50% {
-        text-shadow: 0 0 20px #ffd700, 0 0 40px #ffd700, 0 0 60px rgba(255, 215, 0, 0.8);
-        box-shadow: 0 0 20px #ffd700, 0 0 40px rgba(255, 215, 0, 0.5);
+        text-shadow: 0 0 20px #00a8ff, 0 0 40px #00a8ff, 0 0 60px rgba(0, 168, 255, 0.8);
+        box-shadow: 0 0 20px #00a8ff, 0 0 40px rgba(0, 168, 255, 0.5);
     }
 }
 
@@ -398,15 +398,15 @@ body::before {
 
 /* Header */
 .header {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 25%, #1a1a1a 50%, #2a2a2a 75%, #1a1a1a 100%);
+    background: linear-gradient(135deg, #0055dd 0%, #0088ff 25%, #0066ff 50%, #0044cc 75%, #0055dd 100%);
     background-size: 400% 400%;
     animation: gradientShift 8s ease infinite;
     color: white;
     padding: 40px 0;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 30px rgba(255, 215, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 150, 255, 0.2);
     position: relative;
     overflow: hidden;
-    border-bottom: 2px solid rgba(255, 215, 0, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .header::before {
@@ -446,20 +446,20 @@ body::before {
     max-width: 150px;
     height: auto;
     border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(255, 215, 0, 0.3), 
-                0 0 20px rgba(255, 215, 0, 0.2),
+    box-shadow: 0 10px 40px rgba(0, 150, 255, 0.3), 
+                0 0 20px rgba(0, 150, 255, 0.2),
                 inset 0 0 20px rgba(255, 255, 255, 0.1);
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    border: 3px solid rgba(255, 215, 0, 0.6);
+    border: 3px solid rgba(0, 200, 255, 0.6);
     backdrop-filter: blur(10px);
 }
 
 .logo:hover {
     transform: scale(1.08) rotate(3deg);
-    box-shadow: 0 20px 60px rgba(255, 215, 0, 0.5), 
-                0 0 40px rgba(255, 215, 0, 0.3),
+    box-shadow: 0 20px 60px rgba(0, 150, 255, 0.5), 
+                0 0 40px rgba(0, 150, 255, 0.3),
                 inset 0 0 30px rgba(255, 255, 255, 0.2);
-    border-color: #ffd700;
+    border-color: #00a8ff;
 }
 
 .header-text {
@@ -472,11 +472,11 @@ body::before {
     font-size: 3em;
     margin-bottom: 10px;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7), 
-                 0 0 20px rgba(255, 215, 0, 0.4),
-                 0 0 40px rgba(255, 215, 0, 0.2);
+                 0 0 20px rgba(0, 200, 255, 0.4),
+                 0 0 40px rgba(0, 200, 255, 0.2);
     letter-spacing: 3px;
     font-weight: 800;
-    background: linear-gradient(135deg, #ffd700, #ffed4e);
+    background: linear-gradient(135deg, #ffffff, #00d4ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -484,7 +484,7 @@ body::before {
 
 .tagline {
     font-size: 1.2em;
-    color: #ffd700;
+    color: #ffffff;
     font-weight: 600;
     animation: glow 3s ease-in-out infinite;
     letter-spacing: 1px;
@@ -492,17 +492,17 @@ body::before {
 
 /* Navigation */
 .navbar {
-    background: linear-gradient(90deg, #ffd700 0%, #ffed4e 50%, #ffd700 100%);
+    background: linear-gradient(90deg, #00a8ff 0%, #00d4ff 50%, #00a8ff 100%);
     background-size: 200% 100%;
     animation: gradientShift 4s ease infinite;
     padding: 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 
-                0 0 20px rgba(255, 215, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 100, 200, 0.3), 
+                0 0 20px rgba(0, 150, 255, 0.2);
     animation: slideInDown 0.5s ease-out;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
 }
 
@@ -556,13 +556,13 @@ body::before {
 
 .nav-links a {
     display: block;
-    color: #1a1a1a;
+    color: white;
     text-decoration: none;
     padding: 15px 20px;
     font-weight: 700;
     text-align: center;
     transition: all 0.3s;
-    border-right: 1px solid rgba(0, 0, 0, 0.15);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
     position: relative;
 }
 
@@ -573,7 +573,7 @@ body::before {
     left: 0;
     width: 0;
     height: 4px;
-    background: linear-gradient(90deg, transparent, #1a1a1a, transparent);
+    background: linear-gradient(90deg, transparent, white, transparent);
     transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -582,7 +582,7 @@ body::before {
 }
 
 .nav-links a:hover {
-    background: rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
 }
 
@@ -592,10 +592,10 @@ body::before {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffd700 100%);
+    background: linear-gradient(135deg, #0088ff 0%, #00a8ff 50%, #0066ff 100%);
     background-size: 400% 400%;
     animation: gradientShift 6s ease infinite;
-    color: #1a1a1a;
+    color: white;
     padding: 120px 20px;
     text-align: center;
     position: relative;
@@ -636,7 +636,8 @@ body::before {
     animation: fadeInUp 0.8s ease-out;
     letter-spacing: 2px;
     font-weight: 800;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    color: white;
 }
 
 .hero p {
@@ -647,12 +648,13 @@ body::before {
     z-index: 2;
     animation: fadeInUp 0.8s ease-out 0.2s both;
     font-weight: 500;
+    color: rgba(255, 255, 255, 0.95);
 }
 
 /* Hours Section */
 .hours {
     padding: 100px 20px;
-    background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 50%, #f5f5f5 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 248, 255, 0.9) 100%);
     position: relative;
 }
 
@@ -689,12 +691,12 @@ body::before {
     backdrop-filter: blur(20px);
     padding: 40px 30px;
     border-radius: 25px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 
-                0 0 20px rgba(255, 215, 0, 0.15),
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1), 
+                0 0 20px rgba(0, 150, 255, 0.15),
                 inset 0 1px 0 rgba(255, 255, 255, 1);
     text-align: center;
-    border: 2px solid rgba(255, 215, 0, 0.3);
-    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border-left: 5px solid #00a8ff;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: relative;
     overflow: hidden;
     animation: fadeInUp 0.8s ease-out;
@@ -707,7 +709,7 @@ body::before {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, #ffd700, transparent);
+    background: linear-gradient(90deg, #00a8ff, transparent);
     animation: shimmer 2.5s infinite;
     background-size: 1000px 100%;
 }
@@ -725,10 +727,10 @@ body::before {
 
 .hours-card:hover {
     transform: translateY(-20px) translateZ(0);
-    box-shadow: 0 20px 50px rgba(255, 215, 0, 0.25), 
-                0 0 30px rgba(255, 215, 0, 0.15),
+    box-shadow: 0 20px 50px rgba(0, 150, 255, 0.25), 
+                0 0 30px rgba(0, 150, 255, 0.15),
                 inset 0 1px 0 rgba(255, 255, 255, 1);
-    border-color: rgba(255, 215, 0, 0.6);
+    border-color: rgba(0, 150, 255, 0.6);
     background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 100%);
 }
 
@@ -744,16 +746,16 @@ body::before {
 .hours-card .time {
     font-size: 1.3em;
     font-weight: 700;
-    color: #ffd700;
+    color: #0088ff;
     position: relative;
     z-index: 1;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+    text-shadow: 0 0 10px rgba(0, 150, 255, 0.2);
 }
 
 /* Products Section */
 .products {
     padding: 100px 20px;
-    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 50%, #ffffff 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 248, 255, 0.9) 100%);
     position: relative;
 }
 
@@ -855,7 +857,7 @@ body::before {
 /* Reviews Section */
 .reviews {
     padding: 100px 20px;
-    background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 50%, #f5f5f5 100%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 248, 255, 0.9) 100%);
     position: relative;
 }
 
@@ -891,10 +893,10 @@ body::before {
     padding: 35px;
     border-radius: 25px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 
-                0 0 20px rgba(255, 215, 0, 0.1),
+                0 0 20px rgba(0, 150, 255, 0.1),
                 inset 0 1px 0 rgba(255, 255, 255, 1);
-    border-top: 4px solid #ffd700;
-    border-left: 2px solid rgba(255, 215, 0, 0.3);
+    border-top: 4px solid #00a8ff;
+    border-left: 2px solid rgba(0, 150, 255, 0.3);
     border-right: 1px solid rgba(0, 0, 0, 0.05);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -927,10 +929,10 @@ body::before {
 
 .review-card:hover {
     transform: translateY(-15px) translateZ(0);
-    box-shadow: 0 20px 50px rgba(255, 215, 0, 0.2), 
-                0 0 30px rgba(255, 215, 0, 0.1),
+    box-shadow: 0 20px 50px rgba(0, 150, 255, 0.2), 
+                0 0 30px rgba(0, 150, 255, 0.1),
                 inset 0 1px 0 rgba(255, 255, 255, 1);
-    border-color: rgba(255, 215, 0, 0.5);
+    border-color: rgba(0, 150, 255, 0.5);
     background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 100%);
 }
 
@@ -1023,19 +1025,19 @@ body::before {
 .social-btn {
     display: inline-block;
     padding: 18px 40px;
-    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-    color: #1a1a1a;
+    background: linear-gradient(135deg, #00a8ff 0%, #00d4ff 100%);
+    color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: 700;
     font-size: 1.1em;
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-    border: 2px solid #ffd700;
+    border: 2px solid #00a8ff;
     position: relative;
     overflow: hidden;
     animation: fadeInUp 0.8s ease-out;
     letter-spacing: 1px;
-    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 150, 255, 0.3);
 }
 
 .social-btn::before {
@@ -1052,11 +1054,11 @@ body::before {
 
 .social-btn:hover {
     background: transparent;
-    color: #ffd700;
+    color: #00a8ff;
     transform: scale(1.15) translateY(-5px);
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 
-                0 0 60px rgba(255, 215, 0, 0.3);
-    border-color: #ffd700;
+    box-shadow: 0 0 30px rgba(0, 150, 255, 0.6), 
+                0 0 60px rgba(0, 150, 255, 0.3);
+    border-color: #00a8ff;
 }
 
 .social-btn:hover::before {
