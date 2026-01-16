@@ -1,3 +1,54 @@
+// Advanced Background Animation
+const backgroundAnimation = document.querySelector('.background-animation');
+
+// Dynamic background particle generation
+const createBackgroundParticles = () => {
+    const particleCount = 20;
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'background-particle';
+        particle.style.cssText = `
+            position: absolute;
+            width: ${Math.random() * 300 + 50}px;
+            height: ${Math.random() * 300 + 50}px;
+            background: linear-gradient(${Math.random() * 360}deg, rgba(255, 215, 0, ${Math.random() * 0.1}), rgba(29, 53, 87, ${Math.random() * 0.05}));
+            border-radius: 50%;
+            filter: blur(${Math.random() * 50 + 30}px);
+            top: ${Math.random() * 100}%;
+            left: ${Math.random() * 100}%;
+            animation: floatingParticle ${Math.random() * 30 + 15}s ease-in-out infinite;
+            pointer-events: none;
+            z-index: -1;
+        `;
+        backgroundAnimation.appendChild(particle);
+    }
+};
+
+createBackgroundParticles();
+
+// Add CSS animation for particles
+const particleStyle = document.createElement('style');
+particleStyle.textContent = `
+    @keyframes floatingParticle {
+        0% {
+            transform: translate(0, 0) scale(1) rotate(0deg);
+        }
+        25% {
+            transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) scale(${Math.random() * 0.5 + 0.8}) rotate(90deg);
+        }
+        50% {
+            transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) scale(${Math.random() * 0.5 + 1}) rotate(180deg);
+        }
+        75% {
+            transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px) scale(${Math.random() * 0.5 + 0.9}) rotate(270deg);
+        }
+        100% {
+            transform: translate(0, 0) scale(1) rotate(360deg);
+        }
+    }
+`;
+document.head.appendChild(particleStyle);
+
 // Hamburger Menu Toggle
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
@@ -80,12 +131,17 @@ cards.forEach(card => {
 // Add parallax effect on scroll
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
-    const parallaxElements = document.querySelectorAll('.hero::before, .header::before, .contact::before');
     
     document.querySelectorAll('section').forEach((section, index) => {
         const offset = scrolled * (0.5 - index * 0.1);
         section.style.backgroundPosition = `center ${offset}px`;
     });
+
+    // Animate background elements on scroll
+    const bgAnimation = document.querySelector('.background-animation');
+    if (bgAnimation) {
+        bgAnimation.style.transform = `translateY(${scrolled * 0.5}px)`;
+    }
 });
 
 // Animated counter for stats (if needed)
@@ -178,3 +234,15 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Mouse-tracking background effect
+document.addEventListener('mousemove', (e) => {
+    const x = e.clientX / window.innerWidth;
+    const y = e.clientY / window.innerHeight;
+    
+    const blobs = document.querySelectorAll('.blob, .gradient-orb');
+    blobs.forEach((blob, index) => {
+        const speed = (index + 1) * 0.01;
+        blob.style.transform = `translate(${x * 100 * speed}px, ${y * 100 * speed}px)`;
+    });
+});
